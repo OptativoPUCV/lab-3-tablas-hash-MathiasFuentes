@@ -184,9 +184,9 @@ Pair * nextMap(HashMap * map) {
             map->current = i;
             return map->buckets[i];
         }
-        i = (i + 1) % map->capacity;
-
-        if (i == start) break;
+        //i = (i + 1) % map->capacity;
+        i += 1;
+        if (i == start ||  i == map->capacity) break;
     }
 
     return NULL;
