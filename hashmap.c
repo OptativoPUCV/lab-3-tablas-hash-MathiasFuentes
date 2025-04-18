@@ -173,7 +173,7 @@ Pair * firstMap(HashMap * map) {
 
 Pair * nextMap(HashMap * map) {
     long i = map->current + 1;
-    if (i >= map->capacity) i = 0; 
+    if (i == map->capacity) i = 0; 
     long start = i;
 
     while (1) {
