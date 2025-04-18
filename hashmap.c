@@ -161,6 +161,7 @@ Recuerde actualizar el índice.
 */
 
 Pair * firstMap(HashMap * map) {
+    if (map == NULL || map->buckets == NULL) return NULL;
     for (long i = 0; i < map->capacity; i++) {
         // Buscar un elemento válido
         if (map->buckets[i] != NULL && map->buckets[i]->key != NULL) {
