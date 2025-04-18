@@ -173,18 +173,17 @@ Pair * firstMap(HashMap * map) {
 
 Pair * nextMap(HashMap * map) {
     long i = map->current + 1;
-    if (i >= map->capacity) i = 0;
-    long original = i;
+    if (i >= map->capacity) i = 0; 
+    long start = i;
 
     while (1) {
-
         if (map->buckets[i] != NULL && map->buckets[i]->key != NULL) {
             map->current = i;
             return map->buckets[i];
         }
+        i = (i + 1) % map->capacity;
 
-        if (i == original) break;
-        i++;
+        if (i == start) break;
     }
 
     return NULL;
