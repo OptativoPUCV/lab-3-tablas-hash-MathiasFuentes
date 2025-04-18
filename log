@@ -103,3 +103,17 @@ Fri, Apr 18, 2025  2:13:43 PM:
  1 file changed, 35 insertions(+), 1 deletion(-)
  tests:  0|0
 009197e
+Fri, Apr 18, 2025  2:14:12 PM: 
+ hashmap.c | 1 +
+ 1 file changed, 1 insertion(+)
+Compilation failed
+In file included from test.c:4:0:
+hashmap.c: In function 'enlarge':
+hashmap.c:106:53: error: 'return' with a value, in function returning void [-Werror]
+     if (map == NULL || map->buckets == NULL) return NULL;
+                                                     ^~~~
+hashmap.c:103:6: note: declared here
+ void enlarge(HashMap * map) {
+      ^~~~~~~
+cc1.exe: all warnings being treated as errors
+e3c3eb8
