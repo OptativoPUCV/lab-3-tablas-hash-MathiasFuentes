@@ -183,7 +183,7 @@ Pair * nextMap(HashMap * map) {
             return map->buckets[i];
         }
 
-        if (i == map->current) break;
+        if (i == originalCurrent) break;
         i++;
     }
 
