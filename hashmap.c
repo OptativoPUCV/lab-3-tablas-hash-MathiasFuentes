@@ -173,7 +173,6 @@ Pair * firstMap(HashMap * map) {
 
 Pair * nextMap(HashMap * map) {
     long i = map->current + 1;
-    long originalCurrent = i;
 
     while (1) {
         if (i == map->capacity) i = 0;
@@ -183,7 +182,7 @@ Pair * nextMap(HashMap * map) {
             return map->buckets[i];
         }
 
-        if (i == originalCurrent) break;
+        if (i == map->capacity) break;
         i++;
     }
 
