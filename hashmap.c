@@ -172,6 +172,8 @@ Pair * firstMap(HashMap * map) {
 }
 
 Pair * nextMap(HashMap * map) {
+    if (map == NULL || map->buckets == NULL) return NULL;
+    
     long i = map->current + 1;
     if (i == map->capacity) i = 0; 
     long start = i;
