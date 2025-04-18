@@ -172,8 +172,8 @@ Pair * firstMap(HashMap * map) {
 }
 
 Pair * nextMap(HashMap * map) {
-    long i = map->current;
-    if (i == map->capacity) i = 0;
+    long i = map->current + 1;
+    if (i >= map->capacity) i = 0;
     long original = i;
 
     while (1) {
