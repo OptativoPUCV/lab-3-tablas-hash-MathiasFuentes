@@ -29,3 +29,12 @@ hashmap.c:176:10: error: unused variable 'originalCurrent' [-Werror=unused-varia
           ^~~~~~~~~~~~~~~
 cc1.exe: all warnings being treated as errors
 9a057d5
+Fri, Apr 18, 2025  1:55:36 PM: 
+Compilation failed
+In file included from test.c:4:0:
+hashmap.c: In function 'nextMap':
+hashmap.c:176:10: error: unused variable 'originalCurrent' [-Werror=unused-variable]
+     long originalCurrent = i;
+          ^~~~~~~~~~~~~~~
+cc1.exe: all warnings being treated as errors
+d92b4bc
